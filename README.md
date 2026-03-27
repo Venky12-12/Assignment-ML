@@ -1,17 +1,16 @@
 # Neural Ordinary Differential Equations
-### *Continuous-Depth Models — When Infinite Layers Cost O(1) Memory*
+### *Continuous-Depth Models When Infinite Layers Cost O(1) Memory*
 
-**MLNN Tutorial — University of Hertfordshire — 2025**
 
 ---
 
 ## What This Is
 
-A tutorial on **Neural ODEs** (Chen et al., 2018) — models where a neural network parameterises the *derivative* of the hidden state, and a black-box ODE solver integrates it forward in continuous time.
+A tutorial on **Neural ODEs** (Chen et al., 2018) models where a neural network parameterises the *derivative* of the hidden state, and a black-box ODE solver integrates it forward in continuous time.
 
 Covers: the ResNet → Neural ODE connection, numerical solvers (Euler/RK4/dopri5), the adjoint method for O(1) memory training, spiral classification as a continuous flow, and irregular time series as a unique capability.
 
-**Key insight:** A Neural ODE is the continuous limit of an infinitely deep ResNet — depth becomes adaptive, memory becomes O(1), and the model can handle data at any time stamps.
+**Key insight:** A Neural ODE is the continuous limit of an infinitely deep ResNet depth becomes adaptive, memory becomes O(1), and the model can handle data at any time stamps.
 
 ---
 
@@ -20,7 +19,7 @@ Covers: the ResNet → Neural ODE connection, numerical solvers (Euler/RK4/dopri
 | File | Description |
 |---|---|
 | `node_tutorial.docx` | Full tutorial document (Word format, <2000 words) |
-| `node_tutorial.ipynb` | Jupyter notebook — all code, figures, model implementation |
+| `node_tutorial.ipynb` | Jupyter notebook all code, figures, model implementation |
 | `README.md` | This file |
 | `LICENSE` | MIT licence |
 
@@ -33,7 +32,7 @@ pip install numpy matplotlib scipy torch torchdiffeq nbformat
 jupyter notebook node_tutorial.ipynb
 ```
 
-`torchdiffeq` is optional — if not installed, the ODE function cell defines the interface but skips the actual `odeint` call. All figures still run without it.
+`torchdiffeq` is optional if not installed, the ODE function cell defines the interface but skips the actual `odeint` call. All figures still run without it.
 
 **Google Colab:**
 ```python
@@ -67,14 +66,11 @@ Then upload and run `node_tutorial.ipynb`.
 
 ## References
 
-1. Chen, R.T.Q. et al. (2018) *Neural ordinary differential equations* — https://arxiv.org/abs/1806.07366
-2. Rubanova, Y. et al. (2019) *Latent ODEs for irregularly-sampled time series* — https://arxiv.org/abs/1907.03907
+1. Chen, R.T.Q. et al. (2018) *Neural ordinary differential equations* https://arxiv.org/abs/1806.07366
+2. Rubanova, Y. et al. (2019) *Latent ODEs for irregularly-sampled time series* https://arxiv.org/abs/1907.03907
 3. Grathwohl, W. et al. (2019) *FFJORD* — https://arxiv.org/abs/1810.01367
-4. He, K. et al. (2016) *Deep residual learning for image recognition* — https://arxiv.org/abs/1512.03385
+4. He, K. et al. (2016) *Deep residual learning for image recognition* https://arxiv.org/abs/1512.03385
 5. Pontryagin, L.S. et al. (1962) *The Mathematical Theory of Optimal Processes*. Wiley-Interscience.
 
 ---
 
-## Licence
-
-MIT — see [LICENSE](LICENSE). Free to use, adapt, and share with attribution.
